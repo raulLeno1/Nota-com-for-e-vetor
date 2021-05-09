@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	
+	float notas[4][4];
+	float total[4];
+	float media[4];
+	
+	printf("Digite as notas dos alunos por ordens\n");
+	
+	for(int x=0; x<4; ++x ){
+		
+		for( int y=0; y<4; ++y){
+			
+			scanf("%f", &notas[x][y]);	
+			total[x]+=notas[x][y];
+			media[x]=total[x];
+			
+			}	
+			
+		media[x]=total[x]/4;	
+		printf("Total da nota: %.2f\n", total[x]);
+		printf("M - %.2f\n", media[x]);	
+		
+		if(media[x]>=7){
+			printf("Aprovado\n");
+		}else{
+			printf("Reprovado\n");
+		}
+			
+		
+	}
+	
+
+	
+	return 0;
+}
